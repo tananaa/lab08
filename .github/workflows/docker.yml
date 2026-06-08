@@ -16,10 +16,9 @@ jobs:
     - name: Run container
       run: |
         mkdir -p logs
-        echo -e "test1\ntest2\ntest3" | docker run -i -v "$(pwd)/logs:/home/logs" logger
+        echo -e "test1\nhello docker" | docker run -i -v "$(pwd)/logs:/home/logs" logger
     - name: Check log file
       run: |
         cat logs/log.txt
         grep "test1" logs/log.txt
-        grep "test2" logs/log.txt
-        grep "test3" logs/log.txt
+        grep "hello docker" logs/log.txt

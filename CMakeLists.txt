@@ -5,4 +5,4 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(logger logger.cpp)
-install(TARGETS logger DESTINATION bin)
+install(TARGETS logger RUNTIME DESTINATION bin)
